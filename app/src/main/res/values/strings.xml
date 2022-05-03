@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">StudyTimer</string>
+    <string name="tasktype">Enter your task type</string>
+    <string name="last_session">You spent 00:00:00 on \u0020  </string>
+    <string name="task">\u0020 task</string>
+    <string name="task_type_warning">You have not entered the task type!!</string>
+    <string name="stop_timer">stop timer</string>
+    <string name="start_timer">start timer</string>
+    <string name="pause_timer">pause timer</string>
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".MainActivity"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lastSession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Chronometer
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/pauseTimer"
+            android:layout_width="78dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/pause"
+            app:layout_constraintEnd_toStartOf="@+id/stopTimer"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toEndOf="@+id/startTimer"
+            app:layout_constraintTop_toBottomOf="@+id/timer"
+            android:contentDescription="@string/pause_timer" />
+
+        <ImageButton
+            android:id="@+id/startTimer"
+            android:layout_width="78dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="28dp"
+            android:src="@drawable/play"
+            app:layout_constraintBottom_toBottomOf="@+id/pauseTimer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pauseTimer"
+            android:contentDescription="@string/start_timer" />
+
+        <ImageButton
+            android:id="@+id/stopTimer"
+            android:layout_width="78dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/stop"
+            app:layout_constraintBottom_toBottomOf="@+id/pauseTimer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pauseTimer"
+            android:contentDescription="@string/stop_timer" />
+
+        <EditText
+            android:id="@+id/sessionName"
+            android:layout_width="223dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pauseTimer"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/tasktype"
+            app:layout_constraintBottom_toBottomOf="@+id/sessionName"
+            app:layout_constraintEnd_toStartOf="@+id/sessionName"
+            app:layout_constraintTop_toTopOf="@+id/sessionName"
+            app:layout_constraintVertical_bias="0.517" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
